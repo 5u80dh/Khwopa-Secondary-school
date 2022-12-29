@@ -1,73 +1,110 @@
 <html>
-<head>
-<title></title>
+<body >
+<header style="background-color: red; color: Blue; text-align: center; font-size: 36px; padding: 20px;">Khwopa Secondary School</header><br>
+<center><img src="https://scontent.fsif1-1.fna.fbcdn.net/v/t39.30808-6/309038359_408746628082435_4340240153531569843_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=wdAsYGoxmYMAX-eXll6&_nc_ht=scontent.fsif1-1.fna&oh=00_AfDxBtO8lsuzVirHZ9Bvw-4SkSfuY0FMQcj9fuqnCOtycQ&oe=63B1B2DE" height=200 weight=400 alt="Image" style="border: 5px solid green; border-radius: 10px;"></center>
+<p style="font-size: 18px; font-weight: bold; text-align: center; color: orange;">KSS was founded by Bhakapur Municipality on 16th Shrawan, 2056 (1st August, 1999). Buoyed up with the idea of enlightening the whole society and the nation by means of providing quality education, the municipality made an aggressive initiation realizing their long term vision of the over all development of Bhaktapur.</p>
+<h2 style="color: purple;">Compulsary Subjects:</h2>
+<ol style="list-style-type:decimal;">
+  <li>Business Studies</li>
+  <li>English</li>
+  <li>Account</li>
+  <li>Nepali</li>
+</ol>
+
+<h2 style="color: purple;">Optional Subjects:</h2>
+<ol style="list-style-type:decimal;">
+  <li>Mathematics</li>
+  <li>Computer Science</li>
+ 
+</ol>
+
+<h1 style="font-size: 24px; color: #f00; text-align: center;">HTML Form</h1>
+
 
 <style>
-*{
-margin:0; padding:0; boxsizing:border-box;
-}
-header{
-width: 100%; height: 100vh;
-background-color: white;
-background-repeat: no-repeat;
-background-size: cover;
-}
-nav{
-width: 100%; height: 15vh;
-background: black;
-display: flex; justify-content: space-between;
-align-items: center;
-}
-nav .mainmenu{
-width: 40%;
-display: flex; justify-content: space-around;
-}
-main{
-width: 100%; height: 85vh;
-display: flex; justify-content: center;
-align-items: center;
-text-align: center;
-}
-section h3{
-letter-spacing: 3px; font-weight: 200;
-}
-section h1{
-text-transform: uppercase;
-}
-section div{
-animation:changeborder 10s infinite linear;
-border: 7px solid red;
-}
-@keyframes changeborder{
-0%
-20%
-40%
-}
+  form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
 </style>
-</head>
-<body>
+<form>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="address">Address:</label><br>
+  <input type="text" id="address" name="address"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br>
+  <label for="phone">Phone:</label><br>
+  <input type="tel" id="phone" name="phone"><br>
+  <label for="gender">Gender:</label><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+  <label for="faculty">Faculty:</label><br>
+  <select id="faculty" name="faculty">
+    <option value="engineering">Engineering</option>
+    <option value="arts">Arts</option>
+    <option value="science">Science</option>
+  </select>
+  <br><br>
+  <label for="section">Section:</label><br>
+  <select id="section" name="section">
+    <option value="a">DE</option>
+    <option value="b">DD</option>
+    <option value="c">DF</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+<footer style="text-align: center; font-size: 14px; background-color: #333; color: white;">
+  <p>Homework done by SUBODH</p>
+  <p>HTML AND CSS</p>
+</footer>
 
-<header>
-<nav>
-  
-<div class = "logo" <h3 style="color:white;">KHWOPA SECONDARY SCHOOL</h3></div>
 
-<div class = "mainmenu">
-<a href="https://5u80dh.github.io/Khwopa-Secondary-school/">Home</a>
-<a href="https://5u80dh.github.io/Khwopa-Secondary-school/aboutus">About Us</a>
-<a href="https://drive.google.com/file/d/19rvyaFEe9NmbszvEqwv_kbio-Pg4mqj9/view?usp=sharing">MY APP</a>
-</div>
-</nav>
-<main>
-<section>
-
-<div class = "change_text"><b>WELCOME TO KHWOPA</b></div>
-
-<p><i>(Dedicated To Country & People)</i></p><br>
-
-<marquee><input type = button value = "view more"></marquee>
-</section>
-</main>
-</header>
 </body>
 </html>
+
