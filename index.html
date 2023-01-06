@@ -6,12 +6,13 @@
   <h1>Khwopa Secondary School</h1>
   <nav>
     <ul>
-      <li><a href="https://5u80dh.github.io/Khwopa-Secondary-school/">Home</a></li>
-      <li><a href="https://5u80dh.github.io/Khwopa-Secondary-school/aboutus.html">About us</a></li>
+      <li><a href="">Home</a></li>
+      <li><a href="D:\html practice/about us page.htm">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
-</header><br>
+</header> 
+<br>
 <style>
 header img {
   height: 50px;
@@ -51,7 +52,156 @@ header nav ul li a:hover {
   color: #ccc;
 }
 </style>
-<center><img src="https://scontent.fsif1-1.fna.fbcdn.net/v/t39.30808-6/309038359_408746628082435_4340240153531569843_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=wdAsYGoxmYMAX-eXll6&_nc_ht=scontent.fsif1-1.fna&oh=00_AfDxBtO8lsuzVirHZ9Bvw-4SkSfuY0FMQcj9fuqnCOtycQ&oe=63B1B2DE" height=300 weight=900 alt="Image" style="border: 5px solid green; border-radius: 10px;"></center>
+<style>
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/309038359_408746628082435_4340240153531569843_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=0CGkw_ZXZxQAX8PvZzd&_nc_ht=scontent.fktm3-1.fna&oh=00_AfBeuJ3XTqyQzWCNQrQWGh8r7kZ62WcuC423Y3qsJ_It5A&oe=63BD905E" width="100%">
+  <div class="text">Olympaid Exam</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/324015297_831909521442816_9173404934678250989_n.jpg?stp=dst-jpg_p526x395&_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=IjGIa-BTeAYAX8ealok&_nc_ht=scontent.fktm3-1.fna&oh=00_AfChYgqHpe16Ij0GFHcg6W-9MhrrKysQao7QxYhkyKUzfA&oe=63BD8A89" width="100%">
+  <div class="text">Succesful Students</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://scontent.fktm3-1.fna.fbcdn.net/v/t39.30808-6/323990760_1332880680812988_320598520848603748_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=MRz4sMXwNKIAX-yTJ2m&_nc_ht=scontent.fktm3-1.fna&oh=00_AfB8oTVAHxwXZhcdZ4Rrewiy__CZBhsXv1oUU7tOEb7a_g&oe=63BC5B94" width="100%"">
+  <div class="text">School Buildings</div>
+</div>
+<a prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
 <p style="font-size: 18px; font-weight: bold; text-align: center; color: black;">KSS was founded by Bhakapur Municipality on 16th Shrawan, 2056 (1st August, 1999). Buoyed up with the idea of enlightening the whole society and the nation by means of providing quality education, the municipality made an aggressive initiation realizing their long term vision of the over all development of Bhaktapur.</p>
 <h2 style="color: purple;">Compulsary Subjects:</h2>
 <ol style="list-style-type:decimal;">
@@ -141,9 +291,9 @@ header nav ul li a:hover {
   <br><br>
   <label for="section">Section:</label><br>
   <select id="section" name="section">
-    <option value="De">DE</option>
-    <option value="DD">DD</option>
-    <option value="Df">DF</option>
+    <option value="DE">DE</option>
+    <option value="DE">DD</option>
+    <option value="DE">DF</option>
   </select>
   <br><br>
   <input type="submit" value="Submit">
