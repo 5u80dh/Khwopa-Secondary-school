@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot</title>
+</head>
+<body>
+	<h1>Chatbot</h1>
+	<form>
+		<label for="user-input">Ask me anything:</label><br>
+		<input type="text" id="user-input" name="user-input"><br>
+		<button type="submit">Submit</button>
+	</form>
+	<div id="chat-output"></div>
+
+	<script>
+		const form = document.querySelector('form');
+const userInput = document.querySelector('#user-input');
+const chatOutput = document.querySelector('#chat-output');
+
+const apiEndpoint = 'https://api.openai.com/v1/engine/davinci-codex/completions';
+
+form.addEventListener('submit', async (event) => {
+	event.preventDefault();
+	const response = await fetch(apiEndpoint, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': 'Bearer Ysk-tnDh6qsz4wuJjVXWrhOjT3BlbkFJj0PwJ58CWllcDYfT8MqF'
+		},
+		body: JSON.stringify({
+			prompt: userInput.value,
+			max_tokens: 50,
+			n: 1,
+			stop: ['\n']
+		})
+	});
+
+	const json = await response.json();
+
+	// Extract the response text from the API response and display it to the user
+	const chatResponse = json.choices[0].text.trim();
+	chatOutput.innerHTML += `<p><strong>You:</strong> ${userInput.value}</p>`;
+	chatOutput.innerHTML += `<p><strong>Bot:</strong> ${chatResponse}</p>`;
+
+	// Clear the input field
+	userInput.value = '';
+});
+
+	</script>
+<style>
+body {
+	font-family: Arial, sans-serif;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+label {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+input[type="text"] {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+button[type="submit"] {
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #0062cc;
+}
+
+#chat-output {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	height: 200px;
+	overflow-y: scroll;
+	margin-bottom: 20px;
+}
+
+#chat-output p {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+#chat-output p:last-child {
+	margin-bottom: 0;
+}
+</style>
+</body>
+</html>
